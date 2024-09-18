@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            border: 0px solid;
+            height: 90vh;
+            width: 80vw;
+            justify-content: center;
+            align-content: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 5px;
+        }
+        .cd{
+            height: 170px;
+            width: 312px;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            gap: 5px;
+            background-color: black;
+        }
+        .item{
+            border: 1px solid black;
+            height: 83px;
+            width: 100px;
+        }
+        .item1{
+            background-color: red;
+        }
+        .item2{
+            background-color: orangered;
+        }
+        .item3{
+            background-color: orange;
+        }
+        .item4{
+            background-color: green;
+        }
+        .item5{
+            background-color: rgb(21, 126, 82);
+        }
+        .item6{
+            background-color: greenyellow;
+        }
+        .cd1{
+            height: 170px;
+            width: 312px;
+            background-color: black;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            gap: 5px;
+            justify-content: center;
+        }
+        .div{
+            background-color: orange;
+        }
+        .item7{
+            background-color: red;
+            grid-column: 1/3;
+        }
+        .item8{
+            background-color: green;
+        }
+        .item9{
+            background-color: orange;
+            grid-row: 1/3;
+            grid-column: 3/4;
+        }
+        .item10{
+            background-color: greenyellow;
+        }
+        .cd2{
+            height: 170px;
+            width: 312px;
+            background-color: black;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            gap: 5px;
+            justify-content: center;
+        }
+        .item11{
+            grid-column: 1/4;
+            background-color: orange;
+        }
+        .item12{
+            background-color: green;
+        }
+        .item13{
+            grid-column: 2/4;
+            background-color: red;
+        }
+        .item14{
+            grid-column: 1/4;
+            background-color: yellowgreen;
+        }
+        .cd3{
+            height: 170px;
+            width: 312px;
+            background-color: black;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 75px 75px 75px 75px;
+            grid-template-rows: 50px 50px 50px;
+            gap: 5px;
+            justify-content: center;
+            align-content: center;
+        }
+        .item15{
+            background-color: orange;
+            grid-column: 1/3;
+        }
+        .item16{
+            background-color: red;
+            grid-column: 3/5;
+        }
+        .item17{
+            background-color: green;
+        }
+        .item18{
+            background-color: rgb(21, 126, 82);
+            grid-column: 2/5;
+        }
+        .item19{
+            background-color: orange;
+            grid-column: 1/5;
+        }
+        .cd4{
+            height: 170px;
+            width: 312px;
+            background-color: black;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 45px 45px 45px 45px 45px 45px;
+            grid-template-rows: 50px 50px 50px;
+            gap: 5px;
+            justify-content: center;
+            align-content: center;
+        }
+        .item20{
+            background-color: green;
+        }
+        .item21{
+            background-color: orangered;
+        }
+        .item22{
+            background-color: greenyellow;
+        }
+        .item23{
+            background-color: red;
+        }
+        .item24{
+            background-color: greenyellow;
+        }
+        .item25{
+            background-color: orangered;
+        }
+        .item26{
+            background-color: orange;
+        }
+        .item27{
+            background-color: green;
+        }
+        .item28{
+            background-color: orangered;
+        }
+        .item29{
+            background-color: yellowgreen;
+        }
+        .item30{
+            background-color: orange;
+        }
+        .item31{
+            background-color: red;
+        }
+        .item32{
+            background-color: green;
+        }
+        .item33{
+            background-color: red;
+        }
+        .item34{
+            background-color: yellowgreen;
+        }
+        .item35{
+            background-color: orange;
+        }
+        .item36{
+            background-color: green;
+        }
+        .item37{
+            background-color: yellowgreen;
+        }
+        .cd5{
+            height: 170px;
+            width: 312px;
+            background-color: black;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: 5;
+            gap: 5px;
+        }
+        .item38{
+            background-color: red;
+            grid-row: 1;
+            grid-column: 1/3;
+        }
+        .item39{
+            background-color: green;
+            grid-row: 1;
+        }
+        .item40{
+            grid-row: 1;
+            
+        }
+        .item41{
+            background-color: orangered;
+            grid-row: 2;
+            grid-column: 1;
+        }
+        .item42{
+            background-color: green;
+            grid-row: 2;
+            grid-column: 2;
+        }
+        .item43{
+            background-color: greenyellow;
+            grid-row: 2;
+            grid-column: 3;
+        }
+        .item44{
+            grid-row: 3/5;
+            grid-column: 1/3;
+        }
+        .item45{
+            background-color: green;
+            grid-row: 3;
+            grid-column: 3;
+        }
+        .item46{
+            background-color: greenyellow;
+            grid-row: 4;
+            grid-column: 3;
+        }
+        .item47{
+            background-color: red;
+            grid-row: 3;
+            grid-column: 4;
+        }
+        .item48{
+            background-color: green;
+            grid-row: 5;
+            grid-column: 1/4;
+        }
+        .item49{
+            grid-row: 5;
+            grid-column: 4/5;
+        }
+        .cd6{
+            height: 170px;
+            width: 312px;
+            background-color: black;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            justify-content: center;
+            align-content: center;
+            gap: 5px;
+
+        }
+        .item103{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            background-color: greenyellow;
+            margin: 2px;
+            padding: 10px;
+            border: 2px solid rgb(9, 9, 68);
+            justify-content: center;
+            align-content: center;
+            gap: 5px;
+            grid-row: 2/4;
+        }
+        .item101{
+            background-color: greenyellow;
+        }
+        .item102{
+            background-color: red;
+            grid-row: 2/4;
+        }
+        .item104{
+            grid-column: 1/3;
+            background-color: blue;
+        }
+        .item105{
+            background-color: green;
+        }
+        .cd7{
+            height: 170px;
+            width: 312px;
+            background-color: black;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 55px 55px 55px 55px 55px ;
+            grid-template-rows: 50px 50px 50px;
+            justify-content: center;
+            align-content: center;
+            gap: 5px;
+        }
+        .item50{
+            background-color: red;
+        }
+        .item51{
+            background-color: orange;
+        }
+        .item52{
+            background-color: greenyellow;
+        }
+        .item53{
+            background-color: rgb(21, 126, 82);
+        }
+        .item54{
+            background-color: green;
+        }
+        .item55{
+            background-color: orange;
+        }
+        .item56{
+            background-color: red;
+        }
+        .item57{
+            background-color: orangered;
+            grid-column: 3/6;
+        }
+        .item58{
+            background-color: greenyellow;
+            grid-column: 1/6;
+        }
+        .cd8{
+            height: 170px;
+            width: 312px;
+            background-color: black;
+            border: 2px solid rgb(9, 9, 68);
+            margin: 2px;
+            padding: 10px;
+            display: grid;
+            grid-template-columns: 95px 95px 95px ;
+            grid-template-rows: 50px 50px 50px;
+            justify-content: center;
+            align-content: center;
+        }
+        .item65{
+            background-color: orange;
+            grid-column: 1/4;
+        }
+        .item68{
+            background-color: green;
+            grid-row: 2/4;
+        }
+        .item66{
+            background-color: greenyellow;
+            grid-column: 2/4;
+        }
+        .item67{
+            background-color: red;
+        }
+        .item69{
+            background-color: orange;
+        }
+
+        
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="cd">
+            <div class="item item1"></div>
+            <div class="item item2"></div>
+            <div class="item item3"></div>
+            <div class="item item4"></div>
+            <div class="item item5"></div>
+            <div class="item item6"></div>
+        </div>
+        <div class="cd1">
+            <div class="div item7"></div>
+            <div class="div item8"></div>
+            <div class="div item9"></div>
+            <div class="div item10"></div>
+        </div>
+        <div class="cd2">
+            <div class="div item11"></div>
+            <div class="div item12"></div>
+            <div class="div item13"></div>
+            <div class="div item14"></div>
+        </div>
+        <div class="cd3">
+            <div class="div item15"></div>
+            <div class="div item16"></div>
+            <div class="div item17"></div>
+            <div class="div item18"></div>
+            <div class="div item19"></div>
+        </div>
+        <div class="cd4">
+            <div class="div1 item20"></div>
+            <div class="div1 item21"></div>
+            <div class="div1 item22"></div>
+            <div class="div1 item23"></div>
+            <div class="div1 item24"></div>
+            <div class="div1 item25"></div>
+            <div class="div1 item26"></div>
+            <div class="div1 item27"></div>
+            <div class="div1 item28"></div>
+            <div class="div1 item29"></div>
+            <div class="div1 item30"></div>
+            <div class="div1 item31"></div>
+            <div class="div1 item32"></div>
+            <div class="div1 item33"></div>
+            <div class="div1 item34"></div>
+            <div class="div1 item35"></div>
+            <div class="div1 item36"></div>
+            <div class="div1 item37"></div>
+        </div>
+        <div class="cd5">
+            <div class="div item38"></div>
+            <div class="div item39"></div>
+            <div class="div item40"></div>
+            <div class="div item41"></div>
+            <div class="div item42"></div>
+            <div class="div item43"></div>
+            <div class="div item44"></div>
+            <div class="div item45"></div>
+            <div class="div item46"></div>
+            <div class="div item47"></div>
+            <div class="div item48"></div>
+            <div class="div item49"></div>
+        </div>
+        <div class="cd cd6">
+            <div class="div item100"></div>
+            <div class="div item101"></div>
+            <div class="div item102"></div>
+            <div class="div item103">
+                <div class="div item104"></div>
+                <div class="div item105"></div>
+                <div class="div item106"></div>
+            </div>
+        </div>
+        <div class="cd cd7">
+            <div class="div item50"></div>
+            <div class="div item51"></div>
+            <div class="div item52"></div>
+            <div class="div item53"></div>
+            <div class="div item54"></div>
+            <div class="div item55"></div>
+            <div class="div item56"></div>
+            <div class="div item57"></div>
+            <div class="div item58"></div>
+            <div class="div item59"></div>
+            <div class="div item60"></div>
+            <div class="div item61"></div>
+            <div class="div item62"></div>
+            <div class="div item63"></div>
+            <div class="div item64"></div>
+        </div>
+        <div class="cd cd8">
+            <div class="div item65"></div>
+            <div class="div item66"></div>
+            <div class="div item67"></div>
+            <div class="div item68"></div>
+            <div class="div item69"></div>
+            <div class="div item70"></div>
+            <div class="div item71"></div>
+            <div class="div item72"></div>
+            <div class="div item73"></div>
+        </div>
+    </div>
+</body>
+</html>
